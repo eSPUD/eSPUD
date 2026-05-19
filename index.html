@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eSPUD — Embedded Special Projects for Utilitarian Devices</title>
+  <meta name="description" content="eSPUD is a research group focused on on-device AI, model efficiency, edge systems, and applied research." />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Three.js + Vanta.js NET (loaded only for the hero) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#hero">
+        <img src="assets/logo.png" alt="eSPUD" class="nav-logo" />
+        <span class="nav-wordmark">eSPUD</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <!-- <a href="#projects">Projects</a> -->
+        <!-- <a href="#showcase">Showcase</a> -->
+        <!-- <a href="#media">Media</a> -->
+        <!-- <a href="#publications">Publications</a> -->
+        <!-- <a href="#team">Team</a> -->
+        <a class="nav-cta" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div id="vanta-bg" class="vanta-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="eSPUD logo" class="hero-logo" />
+      <h1 class="hero-title">eSPUD</h1>
+      <p class="hero-tagline">eSPUD: Embedded Special Projects for Utilitarian Devices</p>
+      <div class="hero-actions">
+        <a href="#about" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Scroll to about">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-eyebrow">About</div>
+      <h2 class="section-title">What is eSPUD?</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            eSPUD is an independent research collective exploring the frontier of
+            <strong>on-device AI</strong>: models small enough to run on phones,
+            sensors, wearables, and the constrained hardware that powers everyday utilitarian
+            devices.
+          </p>
+          <p>
+            We believe meaningful intelligence shouldn't require a datacenter round-trip.
+            Our work spans efficient architectures, compression, hardware-aware training,
+            and the systems plumbing required to ship AI that respects latency, energy,
+            and the user's privacy.
+          </p>
+          <p>
+            We take <strong>AI ethics</strong> seriously. Every project is reviewed for
+            data-use, consent, bias, and downstream impact before it leaves the lab — and
+            we publish what we learn, including what didn't work.
+          </p>
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-num" data-counter="2">0</span>
+              <span class="meta-label">Active projects</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <article class="area-card reveal">
+            <div class="area-icon" aria-hidden="true">
+              <!-- chip icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="5" width="14" height="14" rx="2"/>
+                <rect x="9" y="9" width="6" height="6"/>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+              </svg>
+            </div>
+            <h3>On-Device AI</h3>
+            <p>Models that ship inside the product — no server, no round-trip, no excuses.</p>
+          </article>
+
+          <article class="area-card reveal">
+            <div class="area-icon" aria-hidden="true">
+              <!-- spark/efficiency icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2 4 14h7l-1 8 9-12h-7z"/>
+              </svg>
+            </div>
+            <h3>Model Efficiency</h3>
+            <p>Pruning, quantization, distillation — getting more from fewer parameters and watts.</p>
+          </article>
+
+          <article class="area-card reveal">
+            <div class="area-icon" aria-hidden="true">
+              <!-- nodes/edge icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="5" cy="5" r="2.4"/>
+                <circle cx="19" cy="5" r="2.4"/>
+                <circle cx="5" cy="19" r="2.4"/>
+                <circle cx="19" cy="19" r="2.4"/>
+                <circle cx="12" cy="12" r="2.4"/>
+                <path d="M7 6.5 10.5 10.5M17 6.5 13.5 10.5M7 17.5 10.5 13.5M17 17.5 13.5 13.5"/>
+              </svg>
+            </div>
+            <h3>Edge Systems</h3>
+            <p>The runtimes, compilers, and orchestration that make tiny models behave at scale.</p>
+          </article>
+
+          <article class="area-card reveal">
+            <div class="area-icon" aria-hidden="true">
+              <!-- microscope/applied icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 18h12"/>
+                <path d="M9 18a6 6 0 0 1 6-6"/>
+                <path d="M14 4l4 4-4 4-4-4z"/>
+                <path d="M10 8l-3 3"/>
+              </svg>
+            </div>
+            <h3>Applied Research</h3>
+            <p>Partnering with industry to put ideas in front of real users on real devices.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  ============================================================
+  RESEARCH PROJECTS — ready to uncomment when content is ready
+  ============================================================
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-eyebrow">Projects</div>
+      <h2 class="section-title">What we're building.</h2>
+
+      <div class="filter-tabs" id="projectFilters">
+        <button class="filter-tab is-active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="ondevice">On-Device</button>
+        <button class="filter-tab" data-filter="efficiency">Efficiency</button>
+        <button class="filter-tab" data-filter="edge">Edge</button>
+        <button class="filter-tab" data-filter="applied">Applied</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <a href="projects/microbert.html" class="project-card" data-category="ondevice">
+          <div class="project-status status-shipped">Shipped</div>
+          <h3>microBERT</h3>
+          <p>A 4MB transformer that runs in 12ms on a Cortex-M7. Built for always-on intent classification.</p>
+          <div class="project-tags"><span>NLP</span><span>Embedded</span></div>
+        </a>
+        <a href="#" class="project-card" data-category="efficiency">
+          <div class="project-status status-active">Active</div>
+          <h3>BitPrune</h3>
+          <p>Joint quantization-and-pruning pipeline. 8x model shrink with <1% accuracy loss on ImageNet.</p>
+          <div class="project-tags"><span>Compression</span><span>Vision</span></div>
+        </a>
+        <a href="#" class="project-card" data-category="edge">
+          <div class="project-status status-research">Research</div>
+          <h3>EdgeMesh</h3>
+          <p>Federated inference across heterogeneous edge devices with adaptive partitioning.</p>
+          <div class="project-tags"><span>Distributed</span><span>Systems</span></div>
+        </a>
+        <a href="#" class="project-card" data-category="applied">
+          <div class="project-status status-shipped">Shipped</div>
+          <h3>HearAid-LM</h3>
+          <p>Real-time speech enhancement model running entirely on hearing-aid silicon.</p>
+          <div class="project-tags"><span>Audio</span><span>Health</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!--
+  ============================================================
+  INTERACTIVE SHOWCASE — Chart.js / Prism.js / diagrams / reports
+  ============================================================
+  <section class="showcase section" id="showcase">
+    <div class="container">
+      <div class="section-eyebrow">Showcase</div>
+      <h2 class="section-title">Pick a window into the lab.</h2>
+
+      <div class="showcase-tabs" id="showcaseTabs">
+        <button class="showcase-tab is-active" data-tab="charts">Charts</button>
+        <button class="showcase-tab" data-tab="code">Code</button>
+        <button class="showcase-tab" data-tab="diagram">Architecture</button>
+        <button class="showcase-tab" data-tab="report">Report</button>
+      </div>
+
+      <div class="showcase-panels">
+        <div class="showcase-panel is-active" data-panel="charts">
+          <canvas id="chartLatency" height="320"></canvas>
+        </div>
+
+        <div class="showcase-panel" data-panel="code">
+          <div class="code-wrap">
+            <button class="code-copy" data-copy-target="#codeSample">Copy</button>
+            <pre><code id="codeSample" class="language-python">import espud
+model = espud.load("microbert-int8")
+out = model("turn off the kitchen lights")
+print(out.intent, out.confidence)</code></pre>
+          </div>
+        </div>
+
+        <div class="showcase-panel" data-panel="diagram">
+          <div class="pipeline">
+            <div class="pipe-node" data-tip="Raw sensor / mic / camera input">Input</div>
+            <div class="pipe-arrow"></div>
+            <div class="pipe-node" data-tip="On-device feature extractor">Encode</div>
+            <div class="pipe-arrow"></div>
+            <div class="pipe-node" data-tip="Quantized inference core">Infer</div>
+            <div class="pipe-arrow"></div>
+            <div class="pipe-node" data-tip="Action dispatched locally">Act</div>
+          </div>
+        </div>
+
+        <div class="showcase-panel" data-panel="report">
+          <article class="report">
+            <h3>Q3 Efficiency Benchmark</h3>
+            <p>Across 6 representative tasks, microBERT-int8 holds 97.4% of FP32 accuracy at 11.8% of the memory footprint.</p>
+            <table>
+              <thead><tr><th>Model</th><th>Size</th><th>Latency</th><th>Acc</th></tr></thead>
+              <tbody>
+                <tr><td>BERT-base</td><td>418 MB</td><td>89 ms</td><td>91.2%</td></tr>
+                <tr><td>microBERT-fp16</td><td>52 MB</td><td>21 ms</td><td>90.4%</td></tr>
+                <tr><td>microBERT-int8</td><td>4 MB</td><td>12 ms</td><td>88.7%</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!--
+  ============================================================
+  MEDIA — videos + podcast waveform card
+  ============================================================
+  <section class="media section" id="media">
+    <div class="container">
+      <div class="section-eyebrow">Media</div>
+      <h2 class="section-title">Watch & listen.</h2>
+
+      <div class="media-grid">
+        <article class="media-card video-card">
+          <div class="media-thumb"><span class="play-btn">▶</span></div>
+          <h3>NeurIPS '25 Talk — Tiny Transformers</h3>
+          <p>32 min · keynote</p>
+        </article>
+        <article class="media-card video-card">
+          <div class="media-thumb"><span class="play-btn">▶</span></div>
+          <h3>EdgeMesh Deep Dive</h3>
+          <p>18 min · walkthrough</p>
+        </article>
+        <article class="media-card podcast-card">
+          <div class="waveform" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="podcast-meta">
+            <h3>The eSPUD Podcast</h3>
+            <p>Ep. 07 — Compilers for the constrained</p>
+          </div>
+          <button class="podcast-play" aria-label="Play">▶</button>
+        </article>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!--
+  ============================================================
+  PUBLICATIONS
+  ============================================================
+  <section class="publications section" id="publications">
+    <div class="container">
+      <div class="section-eyebrow">Publications</div>
+      <h2 class="section-title">Selected papers.</h2>
+
+      <ul class="pub-list">
+        <li class="pub-item">
+          <h3>microBERT: 4MB Transformers for Always-On Devices</h3>
+          <div class="pub-meta">NeurIPS 2025 · A. Chen, R. Patel, J. Liu</div>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">Code</a><a href="#">BibTeX</a>
+          </div>
+        </li>
+        <li class="pub-item">
+          <h3>BitPrune: Joint Quantization and Pruning Under a Single Budget</h3>
+          <div class="pub-meta">ICLR 2025 · M. Okafor, S. Nakamura</div>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">Code</a><a href="#">BibTeX</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  -->
+
+  <!--
+  ============================================================
+  TEAM
+  ============================================================
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section-eyebrow">Team</div>
+      <h2 class="section-title">Who we are.</h2>
+
+      <div class="team-grid">
+        <div class="member-card">
+          <div class="avatar">AC</div>
+          <h3>Aanya Chen</h3>
+          <p>Research Lead — efficient architectures</p>
+        </div>
+        <div class="member-card">
+          <div class="avatar">RP</div>
+          <h3>Ravi Patel</h3>
+          <p>Systems — runtimes & compilers</p>
+        </div>
+        <div class="member-card">
+          <div class="avatar">JL</div>
+          <h3>Jamie Liu</h3>
+          <p>Applied — partnerships & deployment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="" class="footer-logo" />
+        <div>
+          <div class="footer-name">eSPUD</div>
+          <div class="footer-sub">Embedded Special Projects for Utilitarian Devices</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.84 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.31-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.24-3.22-.13-.31-.54-1.54.11-3.21 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.67.25 2.9.12 3.21.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-copy">© <span id="year"></span> eSPUD Research · All work licensed openly unless noted.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
