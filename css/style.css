@@ -533,7 +533,6 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--text-dim);
   font-size: 15.5px;
   margin: 0 0 24px;
-  max-width: 56ch;
 }
 .featured-desc strong { color: var(--text); font-weight: 600; }
 
