@@ -196,36 +196,23 @@ button { font-family: inherit; cursor: pointer; }
 .hero-os-card {
   display: inline-flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
   margin: 28px auto 0;
-  padding: 14px 20px;
-  min-width: 220px;
-  border-radius: 14px;
+  padding: 16px 20px 18px;
+  min-width: 260px;
+  max-width: min(560px, 92vw);
+  border-radius: 16px;
   background: rgba(20, 18, 32, 0.55);
   border: 1px solid var(--border-2);
   color: var(--text);
   text-align: left;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transition: transform .18s ease, border-color .2s ease, background .2s ease, box-shadow .25s ease;
-}
-.hero-os-card:hover {
-  border-color: var(--accent);
-  background: rgba(30, 22, 50, 0.65);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px -16px var(--accent-glow);
 }
 .hero-os-head {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-.hero-os-dot {
-  width: 7px; height: 7px;
-  border-radius: 999px;
-  background: var(--status-shipped);
-  box-shadow: 0 0 0 0 rgba(52,211,153,0.6);
-  animation: livePulse 2s ease-out infinite;
 }
 .hero-os-eyebrow {
   font-family: var(--font-mono);
@@ -234,20 +221,71 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: 0.16em;
   color: var(--text-dim);
 }
-.hero-os-body {
+.hero-os-pills {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Glass pill — one per project */
+.os-pill {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
+  padding: 7px 12px 7px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  font-size: 13.5px;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  transition: transform .18s ease, border-color .2s ease, background .2s ease, box-shadow .25s ease, color .2s ease;
+  position: relative;
+  isolation: isolate;
 }
-.hero-os-name {
+.os-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(139,92,246,0.18), rgba(139,92,246,0) 60%);
+  opacity: 0;
+  transition: opacity .25s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+.os-pill:hover {
+  border-color: rgba(139,92,246,0.55);
+  background: rgba(139,92,246,0.10);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.10),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.30),
+    0 10px 28px -14px var(--accent-glow);
+}
+.os-pill:hover::before { opacity: 1; }
+.os-pill-dot {
+  width: 7px; height: 7px;
+  border-radius: 999px;
+  background: var(--status-shipped);
+  box-shadow: 0 0 0 0 rgba(52,211,153,0.6);
+  animation: livePulse 2s ease-out infinite;
+  flex: 0 0 auto;
+}
+.os-pill-name {
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: -0.01em;
-  color: var(--accent-2);
+  letter-spacing: -0.005em;
+  color: var(--text);
 }
-.hero-os-card svg { color: var(--text-dim); transition: transform .15s ease, color .15s ease; }
-.hero-os-card:hover svg { transform: translateX(3px); color: var(--text); }
+.os-pill svg {
+  color: var(--text-dim);
+  transition: transform .15s ease, color .15s ease;
+}
+.os-pill:hover svg { transform: translateX(2px); color: var(--accent-2); }
 
 .hero-logo {
   width: 320px;
