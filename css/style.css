@@ -473,9 +473,6 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 0;
   position: relative;
 }
 .featured-card::before {
