@@ -83,8 +83,17 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.01, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => io.observe(el));
+    // Fallback: if any reveal is still hidden after first paint (e.g. observer
+    // callback delayed for an already-visible large element), nudge it on.
+    requestAnimationFrame(() => {
+      reveals.forEach(el => {
+        const r = el.getBoundingClientRect();
+        const inView = r.top < window.innerHeight && r.bottom > 0;
+        if (inView) el.classList.add('is-visible');
+      });
+    });
   } else {
     reveals.forEach(el => el.classList.add('is-visible'));
   }
