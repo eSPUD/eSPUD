@@ -288,15 +288,10 @@ button { font-family: inherit; cursor: pointer; }
 .os-pill:hover svg { transform: translateX(2px); color: var(--accent-2); }
 
 .hero-logo {
-  width: clamp(180px, 26vh, 280px);
+  width: clamp(180px, 26vh, 320px);
   max-width: 70vw;
   margin: 0 auto 18px;
   filter: drop-shadow(0 0 40px rgba(139,92,246,0.35));
-  animation: floaty 7s ease-in-out infinite;
-}
-@keyframes floaty {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
 }
 .hero-title {
   /* hidden visually — the logo carries the wordmark — but kept for SEO/a11y */
