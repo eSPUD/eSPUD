@@ -518,27 +518,31 @@ kbd {
 .about-text strong { color: var(--text); font-weight: 600; }
 
 .about-meta {
-  margin-top: 22px;
-  display: flex;
-  gap: 36px;
-  flex-wrap: wrap;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 8px 28px;
 }
-.meta-item { display: flex; flex-direction: column; gap: 4px; }
-a.meta-item { transition: transform .15s ease; }
-a.meta-item:hover { transform: translateY(-2px); }
+.meta-item {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+}
+a.meta-item { transition: color .2s ease; }
 a.meta-item:hover .meta-label { color: var(--accent-2); }
 a.meta-item .meta-label { transition: color .2s ease; }
 .meta-num {
   font-family: var(--font-mono);
-  font-size: 30px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--accent-2);
   letter-spacing: -0.02em;
 }
 .meta-label {
-  font-size: 12px;
+  font-size: 11.5px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: var(--text-mute);
 }
 
@@ -1336,5 +1340,5 @@ a.meta-item .meta-label { transition: color .2s ease; }
   .hero-logo { width: 240px; }
   .section { padding: 72px 0; }
   .section-title { margin-bottom: 36px; }
-  .about-meta { gap: 22px; }
+  .about-meta { gap: 8px 22px; }
 }
