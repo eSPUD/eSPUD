@@ -13,27 +13,54 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
-    .research-wrap {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 140px 24px 90px;
+    .research-hero {
+      padding: 160px 0 20px;
       background:
-        radial-gradient(ellipse at top, rgba(139,92,246,0.12), transparent 60%),
+        radial-gradient(ellipse at top, rgba(139,92,246,0.10), transparent 60%),
         var(--bg);
     }
-    .research-inner { max-width: 640px; }
-    .crumbs {
+    .research-hero .crumbs {
       font-family: var(--font-mono);
       font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-mute);
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
-    .crumbs a { color: var(--accent-2); }
+    .research-hero .crumbs a { color: var(--accent-2); }
+    .research-hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .research-hero .lede {
+      color: var(--text-dim);
+      max-width: 700px;
+      font-size: 18px;
+    }
+    .research-page { padding: 30px 0 90px; background: var(--bg); }
+
+    /* Coming-soon panel, styled to match the project cards */
+    .soon-card {
+      background:
+        linear-gradient(180deg, rgba(139,92,246,0.04), transparent 30%),
+        var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .soon-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 100% 0%, var(--accent-dim), transparent 50%);
+      opacity: 0.6;
+    }
     .soon-badge {
+      position: relative;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -46,7 +73,7 @@
       border: 1px solid rgba(251,191,36,0.28);
       padding: 6px 14px;
       border-radius: 999px;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
     .soon-badge .dot {
       width: 7px; height: 7px;
@@ -55,32 +82,25 @@
       box-shadow: 0 0 0 0 rgba(251,191,36,0.6);
       animation: livePulse 2s ease-out infinite;
     }
-    .research-wrap h1 {
-      font-size: clamp(40px, 6vw, 68px);
-      letter-spacing: -0.03em;
-      margin: 0 0 16px;
-      background: linear-gradient(180deg, #fff, var(--accent-2));
-      -webkit-background-clip: text;
-              background-clip: text;
-      color: transparent;
+    .soon-card h2 {
+      position: relative;
+      font-size: clamp(22px, 3vw, 28px);
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
     }
-    .research-wrap .lede {
+    .soon-card p {
+      position: relative;
       color: var(--text-dim);
-      font-size: 18px;
+      font-size: 15px;
       line-height: 1.6;
-      margin: 0 auto 14px;
-    }
-    .research-wrap .sub {
-      color: var(--text-mute);
-      font-size: 14.5px;
-      margin: 0 auto 34px;
+      max-width: 640px;
+      margin: 0 0 22px;
     }
     .research-areas {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      justify-content: center;
-      margin-bottom: 36px;
     }
     .research-areas span {
       font-family: var(--font-mono);
@@ -96,6 +116,7 @@
       gap: 6px;
       font-size: 14px;
       color: var(--text-dim);
+      margin-top: 56px;
     }
     .back-link:hover { color: var(--accent-2); }
   </style>
@@ -117,24 +138,34 @@
     </div>
   </header>
 
-  <main class="research-wrap">
-    <div class="research-inner">
+  <section class="research-hero">
+    <div class="container">
       <div class="crumbs"><a href="https://espud.org">eSPUD</a> / Research</div>
-      <div class="soon-badge"><span class="dot"></span> Coming soon</div>
-      <h1>Research</h1>
-      <p class="lede">We're putting together our publications, technical reports, and open benchmarks on private, on-device AI.</p>
-      <p class="sub">Check back soon — or explore what we've already shipped in the meantime.</p>
+      <h1>Research.</h1>
+      <p class="lede">Our publications, technical reports, and open benchmarks on private, on-device AI — built in the open and free to read.</p>
+    </div>
+  </section>
 
-      <div class="research-areas">
-        <span>On-Device AI</span>
-        <span>Model Efficiency</span>
-        <span>Edge Systems</span>
-        <span>Applied Research</span>
-      </div>
+  <section class="research-page">
+    <div class="container">
+      <article class="soon-card">
+        <div class="soon-badge"><span class="dot"></span> Coming soon</div>
+        <h2>We're putting our research together.</h2>
+        <p>
+          Publications, technical reports, and open benchmarks are on the way.
+          Check back soon — or explore what we've already shipped in the meantime.
+        </p>
+        <div class="research-areas">
+          <span>On-Device AI</span>
+          <span>Model Efficiency</span>
+          <span>Edge Systems</span>
+          <span>Applied Research</span>
+        </div>
+      </article>
 
       <a class="back-link" href="projects.html">← See our projects</a>
     </div>
-  </main>
+  </section>
 
   <footer class="footer">
     <div class="container footer-inner">
