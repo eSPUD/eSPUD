@@ -535,8 +535,20 @@ button { font-family: inherit; cursor: pointer; }
 .featured-tagline {
   color: var(--text-dim);
   font-size: 14.5px;
+  margin: 0 0 6px;
+}
+.featured-by {
+  font-size: 12.5px;
+  color: var(--text-mute);
   margin: 0 0 14px;
 }
+.featured-by a {
+  color: var(--accent-2);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s ease;
+}
+.featured-by a:hover { border-bottom-color: var(--accent-2); }
 .featured-desc {
   color: var(--text-dim);
   font-size: 14px;
