@@ -51,6 +51,7 @@
     .member-card a:hover { text-decoration: underline; }
     /* Photo placeholder — drop in <img> to replace */
     .member-photo {
+      position: relative;
       width: 96px; height: 96px;
       border-radius: 999px;
       margin: 0 auto 14px;
@@ -61,7 +62,11 @@
       place-items: center;
       color: var(--text-mute);
     }
+    /* Real photo layers over the silhouette; if the file is missing,
+       onerror hides it and the silhouette placeholder shows through. */
     .member-photo img {
+      position: absolute;
+      inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
       display: block;
@@ -107,8 +112,9 @@
       <div class="team-grid">
         <div class="member-card">
           <div class="member-photo" role="img" aria-label="Photo of Shashank Bangalore Lakshman">
-            <!-- Replace with: <img src="assets/team/shashank.jpg" alt="Shashank Bangalore Lakshman" /> -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+            <!-- Drop assets/team/shashank.jpg to use a real photo; until then the silhouette shows. -->
+            <img src="assets/team/shashank.jpg" alt="Shashank Bangalore Lakshman" onerror="this.style.display='none'" />
           </div>
           <h3>Shashank Bangalore Lakshman</h3>
           <p class="member-role">Technical Lead &amp; Mentor</p>
@@ -119,8 +125,9 @@
 
         <div class="member-card">
           <div class="member-photo" role="img" aria-label="Photo of Scott Eiers">
-            <!-- Replace with: <img src="assets/team/scott.jpg" alt="Scott Eiers" /> -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+            <!-- Drop assets/team/scott.jpg to use a real photo; until then the silhouette shows. -->
+            <img src="assets/team/scott.jpg" alt="Scott Eiers" onerror="this.style.display='none'" />
           </div>
           <h3>Scott Eiers</h3>
           <p class="member-role">Developer</p>
