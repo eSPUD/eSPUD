@@ -29,7 +29,7 @@
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#about">About</a>
+        <a href="#hero">About</a>
         <a href="research.html">Research</a>
         <a href="projects.html">Projects</a>
         <a href="team.html">Team</a>
@@ -53,9 +53,32 @@
     <div class="hero-content">
       <img src="assets/logo.png" alt="eSPUD logo" class="hero-logo" />
       <h1 class="hero-title">eSPUD</h1>
-      <p class="hero-tagline">eSPUD: Embedded Special Projects for Utilitarian Devices — a research collective</p>
-      <div class="hero-actions">
-        <a href="#about" class="btn btn-primary">Learn More</a>
+      <p class="hero-tagline">eSPUD: Embedded Special Projects for Utilitarian Devices — an independent research collective building private, on-device AI for everyday hardware.</p>
+
+      <div class="hero-areas">
+        <span>On-Device AI</span>
+        <span>Model Efficiency</span>
+        <span>Edge Systems</span>
+        <span>Applied Research</span>
+      </div>
+
+      <div class="about-meta hero-meta">
+        <a class="meta-item" href="projects.html">
+          <span class="meta-num" data-counter="3">0</span>
+          <span class="meta-label">Delivered projects</span>
+        </a>
+        <a class="meta-item" href="research.html">
+          <span class="meta-num" data-counter="0">0</span>
+          <span class="meta-label">Delivered research</span>
+        </a>
+        <div class="meta-item">
+          <span class="meta-num" data-counter="3">0</span>
+          <span class="meta-label">On-going projects</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-num" data-counter="2">0</span>
+          <span class="meta-label">On-going research</span>
+        </div>
       </div>
 
       <div class="hero-os-card">
@@ -80,113 +103,7 @@
       </div>
     </div>
 
-    <a href="#about" class="hero-scroll" aria-label="Scroll to about">
-      <span></span>
-    </a>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="section-eyebrow">About</div>
-      <h2 class="section-title">What is eSPUD?</h2>
-
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>
-            eSPUD is an independent research collective exploring the frontier of
-            <strong>on-device AI</strong>: models small enough to run on phones,
-            sensors, wearables, and the constrained hardware that powers everyday utilitarian
-            devices.
-          </p>
-          <p>
-            We believe meaningful intelligence shouldn't require a datacenter round-trip.
-            Our work spans efficient architectures, compression, hardware-aware training,
-            and the systems plumbing required to ship AI that respects latency, energy,
-            and the user's privacy.
-          </p>
-          <p>
-            We take <strong>AI ethics</strong> seriously. Every project is reviewed for
-            data-use, consent, bias, and downstream impact before it leaves the lab — and
-            we publish what we learn, including what didn't work.
-          </p>
-          <div class="about-meta">
-            <a class="meta-item" href="projects.html">
-              <span class="meta-num" data-counter="3">0</span>
-              <span class="meta-label">Delivered projects</span>
-            </a>
-            <a class="meta-item" href="research.html">
-              <span class="meta-num" data-counter="0">0</span>
-              <span class="meta-label">Delivered research</span>
-            </a>
-            <div class="meta-item">
-              <span class="meta-num" data-counter="3">0</span>
-              <span class="meta-label">On-going projects</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-num" data-counter="2">0</span>
-              <span class="meta-label">On-going research</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-cards">
-          <article class="area-card reveal">
-            <div class="area-icon" aria-hidden="true">
-              <!-- chip icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="5" y="5" width="14" height="14" rx="2"/>
-                <rect x="9" y="9" width="6" height="6"/>
-                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
-              </svg>
-            </div>
-            <h3>On-Device AI</h3>
-            <p>Models that ship inside the product — no server, no round-trip, no excuses.</p>
-          </article>
-
-          <article class="area-card reveal">
-            <div class="area-icon" aria-hidden="true">
-              <!-- spark/efficiency icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M13 2 4 14h7l-1 8 9-12h-7z"/>
-              </svg>
-            </div>
-            <h3>Model Efficiency</h3>
-            <p>Pruning, quantization, distillation — getting more from fewer parameters and watts.</p>
-          </article>
-
-          <article class="area-card reveal">
-            <div class="area-icon" aria-hidden="true">
-              <!-- nodes/edge icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="5" cy="5" r="2.4"/>
-                <circle cx="19" cy="5" r="2.4"/>
-                <circle cx="5" cy="19" r="2.4"/>
-                <circle cx="19" cy="19" r="2.4"/>
-                <circle cx="12" cy="12" r="2.4"/>
-                <path d="M7 6.5 10.5 10.5M17 6.5 13.5 10.5M7 17.5 10.5 13.5M17 17.5 13.5 13.5"/>
-              </svg>
-            </div>
-            <h3>Edge Systems</h3>
-            <p>The runtimes, compilers, and orchestration that make tiny models behave at scale.</p>
-          </article>
-
-          <article class="area-card reveal">
-            <div class="area-icon" aria-hidden="true">
-              <!-- microscope/applied icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 18h12"/>
-                <path d="M9 18a6 6 0 0 1 6-6"/>
-                <path d="M14 4l4 4-4 4-4-4z"/>
-                <path d="M10 8l-3 3"/>
-              </svg>
-            </div>
-            <h3>Applied Research</h3>
-            <p>Partnering with industry to put ideas in front of real users on real devices.</p>
-          </article>
-        </div>
-      </div>
-    </div>
+    <div class="hero-foot">© <span id="year"></span> eSPUD Research · All work licensed openly unless noted.</div>
   </section>
 
   <!--
@@ -395,20 +312,6 @@ print(out.intent, out.confidence)</code></pre>
   -->
 
   <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <a class="footer-brand" href="https://espud.org">
-        <img src="assets/logo.png" alt="" class="footer-logo" />
-        <div>
-          <div class="footer-name">eSPUD</div>
-          <div class="footer-sub">Embedded Special Projects for Utilitarian Devices</div>
-        </div>
-      </a>
-
-      <div class="footer-copy">© <span id="year"></span> eSPUD Research · All work licensed openly unless noted.</div>
-    </div>
-  </footer>
-
   <script src="js/main.js"></script>
   <script src="js/keyboard.js"></script>
 </body>
