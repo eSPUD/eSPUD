@@ -42,11 +42,11 @@
     .team-page { padding: 30px 0 90px; background: var(--bg); }
     /* Compact, centered cards that don't stretch to fill the row */
     .team-grid {
-      grid-template-columns: repeat(auto-fit, minmax(208px, 224px));
-      justify-content: center;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      justify-content: start;
       gap: 16px;
     }
-    .member-card { padding: 20px 16px 18px; }
+    .member-card { padding: 22px 20px 20px; text-align: left; }
     .member-card h3 {
       font-size: 15px;
       line-height: 1.25;
@@ -73,7 +73,8 @@
     }
     .member-stats {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
       gap: 7px;
       margin: 0 0 12px;
     }
@@ -96,7 +97,7 @@
       color: var(--accent-2);
     }
     .member-stats .stat:hover { border-color: var(--accent); color: var(--text); }
-    .member-card .icon-links { margin-left: 0; gap: 7px; justify-content: center; }
+    .member-card .icon-links { margin-left: 0; gap: 7px; justify-content: flex-start; }
     .member-card .icon-link { width: 28px; height: 28px; border-radius: 8px; }
     .member-card .icon-link svg { width: 14px; height: 14px; }
     /* Photo placeholder — drop in <img> to replace */
@@ -104,7 +105,7 @@
       position: relative;
       width: 68px; height: 68px;
       border-radius: 999px;
-      margin: 0 auto 12px;
+      margin: 0 0 12px;
       overflow: hidden;
       background: linear-gradient(135deg, var(--surface-2, #1b1b24), var(--bg-3, #111118));
       border: 1px solid var(--border);
