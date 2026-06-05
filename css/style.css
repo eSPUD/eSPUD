@@ -470,11 +470,10 @@ button { font-family: inherit; cursor: pointer; }
     var(--bg);
   min-height: 100vh;
   padding: 96px 0 72px;
-  display: flex;
-  align-items: center;
 }
 .featured .container { width: 100%; }
 .featured .section-title { margin-bottom: 28px; }
+.featured-card + .featured-card { margin-top: 24px; }
 .featured-card {
   background:
     linear-gradient(180deg, rgba(139,92,246,0.04), transparent 30%),
