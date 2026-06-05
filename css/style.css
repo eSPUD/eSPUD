@@ -281,6 +281,15 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: -0.005em;
   color: var(--text);
 }
+.os-pill-by {
+  color: var(--text-mute);
+  font-size: 12px;
+  padding-left: 8px;
+  margin-left: 1px;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  white-space: nowrap;
+}
+.os-pill:hover .os-pill-by { color: var(--text-dim); }
 .os-pill svg {
   color: var(--text-dim);
   transition: transform .15s ease, color .15s ease;
