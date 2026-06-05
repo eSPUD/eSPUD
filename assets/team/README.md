@@ -8,6 +8,7 @@ Expected filenames (referenced by `team.html`):
 - `scott.jpg` — Scott Eiers
 - `connor.jpg` — Connor Somers
 - `yukta.jpg` — Yukta Tuladhar
+- `max.jpg` — Max Munger
 
 Tips:
 - Square images work best (they're cropped to a circle via `object-fit: cover`).
