@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — eSPUD</title>
+  <meta name="description" content="Research from eSPUD — on-device AI, model efficiency, and edge systems. Coming soon." />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .research-wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 140px 24px 90px;
+      background:
+        radial-gradient(ellipse at top, rgba(139,92,246,0.12), transparent 60%),
+        var(--bg);
+    }
+    .research-inner { max-width: 640px; }
+    .crumbs {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 18px;
+    }
+    .crumbs a { color: var(--accent-2); }
+    .soon-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--status-active);
+      background: rgba(251,191,36,0.10);
+      border: 1px solid rgba(251,191,36,0.28);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+    }
+    .soon-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 999px;
+      background: var(--status-active);
+      box-shadow: 0 0 0 0 rgba(251,191,36,0.6);
+      animation: livePulse 2s ease-out infinite;
+    }
+    .research-wrap h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      letter-spacing: -0.03em;
+      margin: 0 0 16px;
+      background: linear-gradient(180deg, #fff, var(--accent-2));
+      -webkit-background-clip: text;
+              background-clip: text;
+      color: transparent;
+    }
+    .research-wrap .lede {
+      color: var(--text-dim);
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 auto 14px;
+    }
+    .research-wrap .sub {
+      color: var(--text-mute);
+      font-size: 14.5px;
+      margin: 0 auto 34px;
+    }
+    .research-areas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+    .research-areas span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      border: 1px solid var(--border-2);
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+    .back-link:hover { color: var(--accent-2); }
+  </style>
+</head>
+<body>
+
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="https://espud.org">
+        <img src="assets/logo.png" alt="eSPUD" class="nav-logo" />
+        <span class="nav-wordmark">eSPUD</span>
+      </a>
+      <nav class="nav-links">
+        <a href="https://espud.org#about">About</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="research-wrap">
+    <div class="research-inner">
+      <div class="crumbs"><a href="https://espud.org">eSPUD</a> / Research</div>
+      <div class="soon-badge"><span class="dot"></span> Coming soon</div>
+      <h1>Research</h1>
+      <p class="lede">We're putting together our publications, technical reports, and open benchmarks on private, on-device AI.</p>
+      <p class="sub">Check back soon — or explore what we've already shipped in the meantime.</p>
+
+      <div class="research-areas">
+        <span>On-Device AI</span>
+        <span>Model Efficiency</span>
+        <span>Edge Systems</span>
+        <span>Applied Research</span>
+      </div>
+
+      <a class="back-link" href="projects.html">← See our projects</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="https://espud.org">
+        <img src="assets/logo.png" alt="" class="footer-logo" />
+        <div>
+          <div class="footer-name">eSPUD</div>
+          <div class="footer-sub">Embedded Special Projects for Utilitarian Devices</div>
+        </div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span> eSPUD Research · All work licensed openly unless noted.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/keyboard.js"></script>
+</body>
+</html>
