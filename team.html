@@ -35,8 +35,9 @@
     }
     .team-hero .lede {
       color: var(--text-dim);
-      max-width: 700px;
+      max-width: 68ch;
       font-size: 18px;
+      text-wrap: pretty;
     }
     .team-page { padding: 30px 0 90px; background: var(--bg); }
     /* Compact, centered cards that don't stretch to fill the row */
@@ -74,6 +75,31 @@
       margin: 0 0 10px;
       white-space: nowrap;
     }
+    .member-stats {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin: 0 0 12px;
+    }
+    .member-stats .stat {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--text-dim);
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      padding: 4px 9px;
+      border-radius: 8px;
+      transition: border-color .2s ease, color .2s ease;
+    }
+    .member-stats .stat b {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-2);
+    }
+    .member-stats .stat:hover { border-color: var(--accent); color: var(--text); }
     .member-card .icon-links { margin-left: 0; gap: 7px; justify-content: center; }
     .member-card .icon-link { width: 28px; height: 28px; border-radius: 8px; }
     .member-card .icon-link svg { width: 14px; height: 14px; }
@@ -148,6 +174,10 @@
           <h3>Shashank Bangalore Lakshman</h3>
           <p class="member-role">Technical Lead &amp; Mentor</p>
           <p class="member-since"><span class="status-dot"></span> Spring 2026 – Present</p>
+          <div class="member-stats">
+            <a class="stat" href="projects.html"><b>2</b> Projects</a>
+            <a class="stat" href="research.html"><b>0</b> Research</a>
+          </div>
           <span class="icon-links">
             <a class="icon-link" href="https://shashankbl.github.io" target="_blank" rel="noopener" aria-label="Shashank's website" title="Website">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18"/><path d="M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
@@ -167,6 +197,10 @@
           <h3>Scott Eiers</h3>
           <p class="member-role">Student Developer</p>
           <p class="member-since"><span class="status-dot"></span> Spring 2026 – Present</p>
+          <div class="member-stats">
+            <a class="stat" href="projects.html"><b>1</b> Projects</a>
+            <a class="stat" href="research.html"><b>0</b> Research</a>
+          </div>
           <span class="icon-links">
             <a class="icon-link" href="https://www.linkedin.com/in/scott-eiers-a3403a244/" target="_blank" rel="noopener" aria-label="Scott on LinkedIn" title="LinkedIn">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
