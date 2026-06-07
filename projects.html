@@ -39,6 +39,9 @@
       font-size: 18px;
     }
     .projects-page { padding: 30px 0 90px; background: var(--bg); }
+    /* Offset deep-link jumps so the card clears the fixed nav */
+    .featured-card { scroll-margin-top: 96px; }
+    .featured-card:target { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent-dim); }
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -77,7 +80,7 @@
 
   <section class="projects-page">
     <div class="container">
-      <article class="featured-card">
+      <article class="featured-card" id="pi-hub">
         <div class="featured-main">
           <div class="featured-head">
             <div class="featured-status">
@@ -187,7 +190,7 @@
 
       </article>
 
-      <article class="featured-card">
+      <article class="featured-card" id="gemscan">
         <div class="featured-main">
           <div class="featured-head">
             <div class="featured-status">
