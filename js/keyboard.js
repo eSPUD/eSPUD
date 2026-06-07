@@ -122,6 +122,26 @@
     return dialog && !dialog.hidden;
   }
 
+  /* ---------- Mobile nav toggle (wired on every page) ---------- */
+  (function wireMobileNav() {
+    const navToggle = doc.getElementById('navToggle');
+    const navLinks = doc.getElementById('navLinks');
+    if (!navToggle || !navLinks) return;
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    // Close after tapping a link (mobile)
+    navLinks.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+
   /* ---------- Close the mobile menu (if open) ---------- */
   function closeMobileMenu() {
     const navLinks = doc.getElementById('navLinks');

@@ -45,10 +45,9 @@
   else document.addEventListener('DOMContentLoaded', initVanta);
   window.addEventListener('load', initVanta, { once: true });
 
-  /* ----- Nav: scroll state + mobile toggle ----- */
+  /* ----- Nav: scroll state -----
+     (Mobile menu toggle is wired in keyboard.js, which loads on every page.) */
   const nav = document.getElementById('nav');
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
 
   const onScroll = () => {
     if (!nav) return;
@@ -56,22 +55,6 @@
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('is-open');
-      navToggle.classList.toggle('is-open', open);
-      navToggle.setAttribute('aria-expanded', String(open));
-    });
-    // Close on link tap (mobile)
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('is-open');
-        navToggle.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
 
   /* ----- Reveal on scroll ----- */
   const reveals = document.querySelectorAll('.reveal');
