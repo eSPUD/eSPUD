@@ -142,6 +142,30 @@
     });
   })();
 
+  /* ---------- Back-to-top button (every page) ---------- */
+  (function backToTop() {
+    const btn = doc.createElement('button');
+    btn.className = 'to-top';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Scroll to top');
+    btn.innerHTML =
+      '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>';
+    doc.body.appendChild(btn);
+
+    const onScroll = () => {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    btn.addEventListener('click', () => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      const brand = doc.querySelector('.nav-brand');
+      if (brand && typeof brand.focus === 'function') brand.focus();
+    });
+  })();
+
   /* ---------- Close the mobile menu (if open) ---------- */
   function closeMobileMenu() {
     const navLinks = doc.getElementById('navLinks');
