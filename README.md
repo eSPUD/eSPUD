@@ -1,2 +1,2 @@
 # eSPUD
-Embedded Special Projects for Utilitarian Devices
+Emerging Special Projects for Utilitarian Devices
