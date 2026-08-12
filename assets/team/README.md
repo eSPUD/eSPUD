@@ -6,9 +6,6 @@ Expected filenames (referenced by `team.html`):
 
 - `shashank.jpg` — Shashank Bangalore Lakshman
 - `scott.jpg` — Scott Eiers
-- `connor.jpg` — Connor Somers
-- `yukta.jpg` — Yukta Tuladhar
-- `max.jpg` — Max Munger
 - `shravan.jpg` — Shravan Joshi
 
 Tips:
