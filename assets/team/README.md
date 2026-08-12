@@ -9,6 +9,7 @@ Expected filenames (referenced by `team.html`):
 - `connor.jpg` — Connor Somers
 - `yukta.jpg` — Yukta Tuladhar
 - `max.jpg` — Max Munger
+- `shravan.jpg` — Shravan Joshi
 
 Tips:
 - Square images work best (they're cropped to a circle via `object-fit: cover`).
