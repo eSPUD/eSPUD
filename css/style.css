@@ -393,6 +393,15 @@ kbd {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+.hero-os-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-os-group + .hero-os-group {
+  padding-top: 12px;
+  border-top: 1px solid var(--border-2);
+}
 .hero-os-head {
   display: flex;
   align-items: center;
@@ -459,6 +468,12 @@ kbd {
   box-shadow: 0 0 0 0 rgba(52,211,153,0.6);
   animation: livePulse 2s ease-out infinite;
   flex: 0 0 auto;
+}
+/* Research pills use the blue "research" accent with a static (non-live) dot */
+.os-pill--research .os-pill-dot {
+  background: var(--status-research);
+  box-shadow: none;
+  animation: none;
 }
 .os-pill-name {
   font-weight: 600;
