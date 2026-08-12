@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — eSPUD</title>
-  <meta name="description" content="Research from eSPUD — on-device AI, model efficiency, and edge systems. Coming soon." />
+  <meta name="description" content="Research from eSPUD — pre-prints and explorable articles on AI explainability, on-device AI, and edge systems." />
 
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,75 +40,26 @@
     }
     .research-page { padding: 30px 0 90px; background: var(--bg); }
 
-    /* Coming-soon panel, styled to match the project cards */
-    .soon-card {
-      background:
-        linear-gradient(180deg, rgba(139,92,246,0.04), transparent 30%),
-        var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 40px 36px;
-      position: relative;
-      overflow: hidden;
+    /* Offset deep-link jumps so the card clears the fixed nav */
+    .featured-card { scroll-margin-top: 96px; }
+    .featured-card:target { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent-dim); }
+
+    /* Pre-print status pill — blue "research" accent, static (not live) */
+    .featured-status.is-preprint {
+      color: var(--status-research);
+      background: rgba(96,165,250,0.10);
+      border-color: rgba(96,165,250,0.28);
     }
-    .soon-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at 100% 0%, var(--accent-dim), transparent 50%);
-      opacity: 0.6;
+    .featured-status.is-preprint .status-dot {
+      background: var(--status-research);
+      box-shadow: none;
+      animation: none;
     }
-    .soon-badge {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    .featured-venue {
       font-family: var(--font-mono);
       font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--status-active);
-      background: rgba(251,191,36,0.10);
-      border: 1px solid rgba(251,191,36,0.28);
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 18px;
-    }
-    .soon-badge .dot {
-      width: 7px; height: 7px;
-      border-radius: 999px;
-      background: var(--status-active);
-      box-shadow: 0 0 0 0 rgba(251,191,36,0.6);
-      animation: livePulse 2s ease-out infinite;
-    }
-    .soon-card h2 {
-      position: relative;
-      font-size: clamp(22px, 3vw, 28px);
-      letter-spacing: -0.02em;
-      margin: 0 0 10px;
-    }
-    .soon-card p {
-      position: relative;
-      color: var(--text-dim);
-      font-size: 15px;
-      line-height: 1.6;
-      max-width: 640px;
-      margin: 0 0 22px;
-    }
-    .research-areas {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .research-areas span {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-dim);
-      border: 1px solid var(--border-2);
-      padding: 5px 12px;
-      border-radius: 999px;
+      color: var(--text-mute);
+      margin: 0 0 14px;
     }
     .back-link {
       display: inline-flex;
@@ -146,24 +97,98 @@
     <div class="container">
       <div class="crumbs"><a href="https://espud.org">eSPUD</a> / Research</div>
       <h1>Research.</h1>
-      <p class="lede">Our publications, technical reports, and open benchmarks on private, on-device AI — built in the open and free to read.</p>
+      <p class="lede">Our pre-prints, publications, and explorable articles on AI explainability and on-device AI — built in the open and free to read.</p>
     </div>
   </section>
 
   <section class="research-page">
     <div class="container">
-      <article class="soon-card">
-        <div class="soon-badge"><span class="dot"></span> Coming soon</div>
-        <h2>We're putting our research together.</h2>
-        <p>
-          Publications, technical reports, and open benchmarks are on the way.
-          Check back soon — or explore what we've already shipped in the meantime.
-        </p>
-        <div class="research-areas">
-          <span>On-Device AI</span>
-          <span>Model Efficiency</span>
-          <span>Edge Systems</span>
-          <span>Applied Research</span>
+      <article class="featured-card" id="confident-machine">
+        <div class="featured-main">
+          <div class="featured-head">
+            <div class="featured-status is-preprint">
+              <span class="status-dot"></span> Pre-print · VISxAI 2026
+            </div>
+            <h3 class="featured-name">The Confident Machine</h3>
+            <p class="featured-tagline">When a model says it's sure — should you believe it?</p>
+            <p class="featured-venue">
+              Accepted to the 9th Workshop on Visualization for AI Explainability (VISxAI) at IEEE VIS 2026.
+            </p>
+            <p class="featured-by">
+              In collaboration with
+              <span class="dev">Shravan Joshi <span style="color:var(--text-dim)">· Undergraduate, UCLA</span></span>
+            </p>
+          </div>
+
+          <p class="featured-desc">
+            An interactive, explorable article on <strong>model confidence</strong> — how machine
+            learning systems express certainty, why that certainty can be miscalibrated, and how to
+            read it critically. Built as a hands-on visual explainer so readers can poke at the
+            model's confidence themselves rather than take it on faith.
+          </p>
+
+          <div class="featured-stack">
+            <span>Explainable AI</span>
+            <span>Visualization</span>
+            <span>Calibration</span>
+            <span>Explorable Article</span>
+            <span>Pre-print</span>
+          </div>
+
+          <div class="featured-cta">
+            <a class="btn btn-primary" href="https://the-confident-machine.vercel.app" target="_blank" rel="noopener">
+              Read the pre-print
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="featured-card" id="inference-time-scaling">
+        <div class="featured-main">
+          <div class="featured-head">
+            <div class="featured-status is-preprint">
+              <span class="status-dot"></span> Pre-print · VISxAI 2026
+            </div>
+            <h3 class="featured-name">The Story of Inference-Time Scaling</h3>
+            <p class="featured-tagline">…and the training-time loop behind it.</p>
+            <p class="featured-venue">
+              Accepted to the 9th Workshop on Visualization for AI Explainability (VISxAI) at IEEE VIS 2026.
+            </p>
+            <p class="featured-by">
+              In collaboration with
+              <span class="dev">Scott Eiers
+                <span class="icon-links">
+                  <a class="icon-link" href="https://www.linkedin.com/in/scott-eiers-a3403a244/" target="_blank" rel="noopener" aria-label="Scott on LinkedIn" title="LinkedIn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+                  </a>
+                </span>
+                <span style="color:var(--text-dim)">· Undergraduate, Western Governors University</span>
+              </span>
+            </p>
+          </div>
+
+          <p class="featured-desc">
+            An explorable article that tells the story of <strong>inference-time scaling</strong> —
+            how spending more compute at inference lets models reason further — and traces it back to
+            the <strong>training-time loop</strong> that makes that scaling possible. A visual,
+            step-through explainer of how the two phases feed each other.
+          </p>
+
+          <div class="featured-stack">
+            <span>Explainable AI</span>
+            <span>Visualization</span>
+            <span>Inference-Time Scaling</span>
+            <span>Explorable Article</span>
+            <span>Pre-print</span>
+          </div>
+
+          <div class="featured-cta">
+            <a class="btn btn-primary" href="https://sapiotomy.vercel.app" target="_blank" rel="noopener">
+              Read the pre-print
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+          </div>
         </div>
       </article>
 
