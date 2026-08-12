@@ -42,7 +42,7 @@
     .team-page { padding: 30px 0 90px; background: var(--bg); }
     /* Compact, centered cards that don't stretch to fill the row */
     .team-grid {
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       justify-content: start;
       gap: 16px;
     }
@@ -95,6 +95,26 @@
       color: var(--text-mute);
       margin: 0 0 8px;
     }
+    /* Contribution score — projects / research per member */
+    .member-score {
+      display: flex;
+      gap: 8px;
+      margin: 0 0 10px;
+    }
+    .score-item {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      border: 1px solid var(--border-2);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+    .score-num { font-size: 12.5px; font-weight: 700; color: var(--accent-2); }
     .member-since {
       display: inline-flex;
       align-items: center;
@@ -187,6 +207,10 @@
           <p class="member-affil">Graduate Student, M.S. in Artificial Intelligence</p>
           <p class="member-dept">Department of Computer Science, The University of Texas at Austin</p>
           <p class="member-since">Spring 2026 – Present</p>
+          <div class="member-score">
+            <span class="score-item"><span class="score-num">2</span> Projects</span>
+            <span class="score-item"><span class="score-num">2</span> Research</span>
+          </div>
           <span class="icon-links">
             <a class="icon-link" href="https://shashankbl.github.io" target="_blank" rel="noopener" aria-label="Shashank's website" title="Website">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18"/><path d="M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
@@ -209,6 +233,10 @@
           <p class="member-affil">Undergraduate Student, B.S. in Computer Science</p>
           <p class="member-dept">Western Governors University</p>
           <p class="member-since">Spring 2026 – Present</p>
+          <div class="member-score">
+            <span class="score-item"><span class="score-num">1</span> Projects</span>
+            <span class="score-item"><span class="score-num">1</span> Research</span>
+          </div>
           <span class="icon-links">
             <a class="icon-link" href="https://www.linkedin.com/in/scott-eiers-a3403a244/" target="_blank" rel="noopener" aria-label="Scott on LinkedIn" title="LinkedIn">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
@@ -228,6 +256,10 @@
           <p class="member-affil">Undergraduate Student, B.S. in Cognitive Science</p>
           <p class="member-dept">Department of Letters and Sciences, University of California Los Angeles</p>
           <p class="member-since">Summer 2026 – Present</p>
+          <div class="member-score">
+            <span class="score-item"><span class="score-num">0</span> Projects</span>
+            <span class="score-item"><span class="score-num">1</span> Research</span>
+          </div>
           <span class="icon-links">
             <a class="icon-link" href="https://www.linkedin.com/in/shravanjoshi-ca/" target="_blank" rel="noopener" aria-label="Shravan on LinkedIn" title="LinkedIn">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
