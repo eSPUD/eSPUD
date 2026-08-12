@@ -61,6 +61,13 @@
       color: var(--text-mute);
       margin: 0 0 14px;
     }
+    .featured-kind {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--accent-2);
+      margin: 0 0 6px;
+    }
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -110,7 +117,8 @@
               <span class="status-dot"></span> Submitted · VISxAI 2026
             </div>
             <h3 class="featured-name">The Confident Machine</h3>
-            <p class="featured-tagline">When a model says it's sure — should you believe it?</p>
+            <p class="featured-kind">An interactive AI explainer</p>
+            <p class="featured-tagline">Why language models make things up, and what to do about it.</p>
             <p class="featured-venue">
               Submitted to the 9th Workshop on Visualization for AI Explainability (VISxAI) at IEEE VIS 2026.
             </p>
@@ -138,16 +146,16 @@
           </div>
 
           <p class="featured-desc">
-            An interactive, explorable article on <strong>model confidence</strong> — how machine
-            learning systems express certainty, why that certainty can be miscalibrated, and how to
-            read it critically. Built as a hands-on visual explainer so readers can poke at the
-            model's confidence themselves rather than take it on faith.
+            Large language models write with total confidence, whether they are right or inventing
+            facts from thin air. In 14 short, visual pages, this explorable builds up an intuition for
+            what <strong>hallucinations</strong> are, why they are a structural consequence of how these
+            models work, and how researchers, engineers, and everyday users can navigate them.
           </p>
 
           <div class="featured-stack">
             <span>Explainable AI</span>
             <span>Visualization</span>
-            <span>Calibration</span>
+            <span>Hallucinations</span>
             <span>Explorable Article</span>
             <span>Pre-print</span>
           </div>
@@ -168,6 +176,7 @@
               <span class="status-dot"></span> Submitted · VISxAI 2026
             </div>
             <h3 class="featured-name">The Story of Inference-Time Scaling</h3>
+            <p class="featured-kind">An interactive AI explainer</p>
             <p class="featured-tagline">…and the training-time loop behind it.</p>
             <p class="featured-venue">
               Submitted to the 9th Workshop on Visualization for AI Explainability (VISxAI) at IEEE VIS 2026.
@@ -196,10 +205,10 @@
           </div>
 
           <p class="featured-desc">
-            An explorable article that tells the story of <strong>inference-time scaling</strong> —
-            how spending more compute at inference lets models reason further — and traces it back to
-            the <strong>training-time loop</strong> that makes that scaling possible. A visual,
-            step-through explainer of how the two phases feed each other.
+            A language model can get dramatically better answers by <strong>thinking longer at answer
+            time</strong> — not only by being retrained or made larger. This explorable walks through
+            how inference-time scaling works and traces it back to the training-time loop that makes it
+            possible.
           </p>
 
           <div class="featured-stack">
