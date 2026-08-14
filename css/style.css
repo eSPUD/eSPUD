@@ -516,7 +516,6 @@ kbd {
   max-width: 640px;
   line-height: 1.5;
 }
-.hero-tagline-line { display: block; }
 .hero-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
 .btn {
