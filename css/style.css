@@ -13,7 +13,6 @@
   --rule:    rgba(23,23,26,0.13);
   --rule-2:  rgba(23,23,26,0.22);
   --accent:  #0B52B0;   /* the logo's blue, darkened to 7:1 on paper */
-  --ok:      #15704B;
 
   /* One marker colour per member. Okabe-Ito blue / vermillion /
      bluish-green: the canonical set chosen to stay distinguishable
@@ -159,16 +158,8 @@ kbd {
 .row + .row { border-top: 1px solid var(--rule); padding-top: 14px; }
 .row-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .row-top h3 { margin: 0; font-size: 17px; }
-.state {
-  margin-left: auto;
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--mute); white-space: nowrap;
-}
-.dot { width: 5px; height: 5px; border-radius: 999px; background: var(--ok); display: inline-block; }
 
-/* Contributor markers: bars the height of the text they sit beside,
-   never circles — a circle here would read as another status dot */
+/* Contributor markers: bars the height of the text they sit beside */
 .who { display: inline-flex; align-items: center; gap: 3px; font-size: 17px; }
 .m {
   width: 4px;
@@ -273,7 +264,6 @@ kbd {
   .sec { grid-template-columns: 1fr; gap: 6px; }
   .people { grid-template-columns: 1fr; }
   .person + .person { border-top: 1px solid var(--rule); padding-top: 12px; }
-  .state { margin-left: 0; }
   .head-logo { width: 165px; }
   .head-top { flex-direction: column; gap: 12px; }
   .head p { text-align: left; max-width: none; }
