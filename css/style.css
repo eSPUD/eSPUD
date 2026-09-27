@@ -128,6 +128,7 @@ kbd {
   clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 .head p { margin: 0; color: var(--dim); font-size: 13.5px; max-width: 62ch; text-align: right; }
+.head p strong { font-weight: 600; color: var(--text); }
 .stats { display: flex; flex-wrap: wrap; gap: 2px 18px; margin-top: 10px; }
 .stats span { font-size: 11.5px; color: var(--mute); }
 .stats b { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
