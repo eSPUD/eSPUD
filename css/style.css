@@ -165,13 +165,13 @@ kbd {
 .row p { margin: 3px 0 0; color: var(--dim); }
 .row .cite {
   margin: 6px 0 0;
-  font-size: 13px;
+  font-size: 12px;          /* a step down from the body text */
   line-height: 1.5;
-  color: var(--mute);
+  color: var(--mute);       /* #6F7078 — 4.7:1, the lightest grey that still passes AA */
   max-width: 78ch;
 }
-.row .cite em { font-style: italic; color: var(--dim); }
-.row .meta { margin-top: 4px; font-size: 13px; color: var(--mute); }
+.row .cite em { font-style: italic; color: var(--mute); }
+.row .meta { margin-top: 4px; font-size: 12px; color: var(--mute); }
 .row .meta a { color: var(--mute); border-bottom: 1px solid var(--rule-2); }
 .row .meta a:hover { color: var(--text); border-bottom-color: var(--text); }
 .sep { color: var(--rule-2); margin: 0 7px; }
@@ -179,7 +179,7 @@ kbd {
 /* Research tags — pills, one per topic */
 .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
 .tags span {
-  font-size: 12px;
+  font-size: 11.5px;
   line-height: 1.5;
   color: var(--mute);
   border: 1px solid var(--rule);
