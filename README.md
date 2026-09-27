@@ -1,2 +1,2 @@
 # eSPUD
-Emerging Special Projects for Utilitarian Devices
+experimental Studio for Platform Utility & Discovery
