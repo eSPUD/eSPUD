@@ -162,7 +162,7 @@ kbd {
 /* Contributor markers: bars the height of the text they sit beside */
 .who { display: inline-flex; align-items: center; gap: 3px; font-size: 17px; }
 .m {
-  width: 4px;
+  width: 1em;
   height: 1em;
   border-radius: 1px;
   display: inline-block;
