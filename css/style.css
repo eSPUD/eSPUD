@@ -23,7 +23,7 @@
 
   --font: 'Source Serif 4', Iowan Old Style, Charter, Georgia, serif;
   --wrap:  960px;
-  --label: 132px;       /* the left rail every section hangs off */
+  --label: 90px;        /* the left rail every section hangs off */
   --radius: 2px;
 
   color-scheme: light;  /* light UA widgets + scrollbars on dark-mode systems */
