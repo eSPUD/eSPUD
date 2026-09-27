@@ -166,6 +166,17 @@ kbd {
 .row .meta a { color: var(--mute); border-bottom: 1px solid var(--rule-2); }
 .row .meta a:hover { color: var(--text); border-bottom-color: var(--text); }
 .sep { color: var(--rule-2); margin: 0 7px; }
+
+/* Research tags — pills, one per topic */
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.tags span {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--mute);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 1px 9px;
+}
 .row .meta a.go { color: var(--accent); font-weight: 500; border-bottom-color: rgba(11,82,176,0.35); }
 .row .meta a.go:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
