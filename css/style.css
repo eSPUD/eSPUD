@@ -136,9 +136,6 @@ kbd {
 }
 .head p { margin: 0; color: var(--dim); font-size: 14.5px; max-width: 62ch; text-align: right; }
 .head p strong { font-weight: 600; color: var(--text); }
-.stats { display: flex; flex-wrap: wrap; gap: 2px 18px; margin-top: 10px; }
-.stats span { font-size: 12.5px; color: var(--mute); }
-.stats b { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
 
 /* =========================================================
    SECTION — label rail + rows
