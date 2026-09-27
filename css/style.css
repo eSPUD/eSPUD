@@ -111,25 +111,9 @@ kbd {
 .kbd-hint { margin: 10px 0 0; font-size: 11.5px; color: var(--mute); }
 
 /* =========================================================
-   BAR — 40px, sticky, wordmark only
-   ========================================================= */
-.nav {
-  position: sticky; top: 0; z-index: 50;
-  background: var(--bg);
-  border-bottom: 1px solid var(--rule);
-}
-.nav-inner {
-  max-width: var(--wrap); margin: 0 auto; padding: 0 20px;
-  height: 40px;
-  display: flex; align-items: center; gap: 12px;
-}
-.nav-brand { display: flex; align-items: center; gap: 8px; }
-.nav-logo { width: 20px; height: 20px; }
-.nav-wordmark { font-weight: 600; font-size: 13.5px; letter-spacing: -0.015em; }
-/* =========================================================
    MASTHEAD — the logo, one line of prose, four counts
    ========================================================= */
-.head { padding: 24px 0 14px; }
+.head { padding: 40px 0 14px; }
 .head-logo { width: 190px; margin: 0 0 12px; }
 .head h1 {
   position: absolute; width: 1px; height: 1px;
@@ -150,7 +134,7 @@ kbd {
   gap: 0 20px;
   border-top: 1px solid var(--rule-2);
   padding: 14px 0 4px;
-  scroll-margin-top: 48px;
+  scroll-margin-top: 12px;
 }
 .sec > h2 {
   margin: 2px 0 0;
@@ -159,7 +143,7 @@ kbd {
   color: var(--mute);
 }
 
-.row { padding: 0 0 14px; scroll-margin-top: 52px; }
+.row { padding: 0 0 14px; scroll-margin-top: 12px; }
 .row + .row { border-top: 1px solid var(--rule); padding-top: 14px; }
 .row-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .row-top h3 { margin: 0; font-size: 15px; }
@@ -200,7 +184,7 @@ kbd {
 /* =========================================================
    DETAIL PAGE (projects/microbert.html)
    ========================================================= */
-.page { padding: 26px 0 0; }
+.page { padding: 40px 0 0; }
 .crumbs { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute); margin-bottom: 10px; }
 .crumbs a { color: var(--accent); }
 .page h1 { margin: 0 0 6px; font-size: 22px; }

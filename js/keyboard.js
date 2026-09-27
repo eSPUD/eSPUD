@@ -40,7 +40,16 @@
      The site is one page with no header menu, so each key scrolls to a
      section when it exists and falls back to the home link elsewhere
      (e.g. the microBERT detail page). */
-  const home = doc.querySelector('.nav-brand');
+  const toTop = {
+    click() {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      history.replaceState(null, '', location.pathname);
+    },
+  };
+  const home = location.pathname === '/' || location.pathname.endsWith('/index.html')
+    ? toTop
+    : { click() { location.href = '/'; } };
   const jump = (id) => {
     const el = doc.getElementById(id);
     if (!el) return home;
@@ -149,8 +158,8 @@
     btn.addEventListener('click', () => {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-      const brand = doc.querySelector('.nav-brand');
-      if (brand && typeof brand.focus === 'function') brand.focus();
+      const main = doc.getElementById('main');
+      if (main && typeof main.focus === 'function') main.focus();
     });
   })();
 
