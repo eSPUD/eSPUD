@@ -111,7 +111,7 @@ kbd {
 .kbd-hint { margin: 10px 0 0; font-size: 11.5px; color: var(--mute); }
 
 /* =========================================================
-   BAR — 40px, sticky, anchors only
+   BAR — 40px, sticky, wordmark only
    ========================================================= */
 .nav {
   position: sticky; top: 0; z-index: 50;
@@ -126,27 +126,6 @@ kbd {
 .nav-brand { display: flex; align-items: center; gap: 8px; }
 .nav-logo { width: 20px; height: 20px; }
 .nav-wordmark { font-weight: 600; font-size: 13.5px; letter-spacing: -0.015em; }
-.nav-links { margin-left: auto; display: flex; align-items: center; gap: 16px; }
-.nav-links a {
-  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--mute);
-  padding-bottom: 1px; border-bottom: 1px solid transparent;
-  transition: color .15s ease, border-color .15s ease;
-}
-.nav-links a:hover { color: var(--text); border-bottom-color: var(--text); }
-
-.nav-toggle {
-  display: none;
-  margin-left: auto;
-  background: none; border: 0; padding: 0;
-  width: 28px; height: 28px;
-  flex-direction: column; justify-content: center; align-items: center; gap: 4px;
-}
-.nav-toggle span { display: block; width: 18px; height: 1.5px; background: var(--text); transition: transform .2s ease, opacity .2s ease; }
-.nav-toggle.is-open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
-.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
-.nav-toggle.is-open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
-
 /* =========================================================
    MASTHEAD — the logo, one line of prose, four counts
    ========================================================= */
@@ -246,18 +225,4 @@ kbd {
   .state { margin-left: 0; }
   .head-logo { width: 165px; }
 
-  .nav-toggle { display: flex; }
-  .nav-links {
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    margin: 0;
-    background: var(--bg);
-    border-bottom: 1px solid var(--rule);
-    flex-direction: column; align-items: flex-start; gap: 0;
-    padding: 6px 0;
-    transform: translateY(-6px); opacity: 0; pointer-events: none;
-    transition: transform .2s ease, opacity .2s ease;
-  }
-  .nav-links.is-open { transform: none; opacity: 1; pointer-events: auto; }
-  .nav-links a { padding: 9px 20px; width: 100%; border-bottom: 0; }
 }

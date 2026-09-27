@@ -2,9 +2,9 @@
    eSPUD — keyboard.js
    Site-wide keyboard accessibility:
    - Skip-to-content link
-   - Intuitive global shortcuts (h/p/t/a navigation, ? for help)
+   - Intuitive global shortcuts (h/r/p/t navigation, ? for help)
    - Accessible help dialog with focus trap
-   - Esc closes the mobile menu and any open dialog
+   - Esc closes any open dialog
    Loaded on every page; degrades gracefully when elements are absent.
    ========================================================= */
 (() => {
@@ -36,33 +36,41 @@
     doc.body.insertBefore(skip, doc.body.firstChild);
   }
 
-  /* ---------- Map shortcut keys to existing nav links ---------- */
-  // Reusing the page's own links keeps targets correct on every page
-  // (root pages, sub-pages, local file:// or production espud.org).
-  const navAnchors = Array.from(doc.querySelectorAll('.nav-links a'));
-  const byText = (label) =>
-    navAnchors.find((a) => a.textContent.trim().toLowerCase() === label);
+  /* ---------- Map shortcut keys to the page's own sections ----------
+     The site is one page with no header menu, so each key scrolls to a
+     section when it exists and falls back to the home link elsewhere
+     (e.g. the microBERT detail page). */
+  const home = doc.querySelector('.nav-brand');
+  const jump = (id) => {
+    const el = doc.getElementById(id);
+    if (!el) return home;
+    return {
+      click() {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        history.replaceState(null, '', '#' + id);
+      },
+    };
+  };
 
   const targets = {
-    h: doc.querySelector('.nav-brand'), // Home
-    a: byText('about'),
-    r: byText('research'),
-    p: byText('projects'),
-    t: byText('team'),
+    h: home,
+    r: jump('research'),
+    p: jump('projects'),
+    t: jump('team'),
   };
 
   /* ---------- Keyboard shortcuts help dialog ---------- */
   const SHORTCUTS = [
     { keys: ['?'], desc: 'Show / hide this help' },
     { keys: ['H'], desc: 'Home' },
-    { keys: ['A'], desc: 'About' },
     { keys: ['R'], desc: 'Research' },
     { keys: ['P'], desc: 'Projects' },
     { keys: ['T'], desc: 'Team' },
     { keys: ['Tab'], desc: 'Move to next link or button' },
     { keys: ['Shift', 'Tab'], desc: 'Move to previous' },
     { keys: ['Enter'], desc: 'Activate the focused link / button' },
-    { keys: ['Esc'], desc: 'Close this help or the menu' },
+    { keys: ['Esc'], desc: 'Close this help' },
   ];
 
   let dialog, lastFocused;
@@ -122,26 +130,6 @@
     return dialog && !dialog.hidden;
   }
 
-  /* ---------- Mobile nav toggle (wired on every page) ---------- */
-  (function wireMobileNav() {
-    const navToggle = doc.getElementById('navToggle');
-    const navLinks = doc.getElementById('navLinks');
-    if (!navToggle || !navLinks) return;
-    navToggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('is-open');
-      navToggle.classList.toggle('is-open', open);
-      navToggle.setAttribute('aria-expanded', String(open));
-    });
-    // Close after tapping a link (mobile)
-    navLinks.querySelectorAll('a').forEach((a) => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('is-open');
-        navToggle.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-
   /* ---------- Back-to-top button (every page) ---------- */
   (function backToTop() {
     const btn = doc.createElement('button');
@@ -166,22 +154,6 @@
     });
   })();
 
-  /* ---------- Close the mobile menu (if open) ---------- */
-  function closeMobileMenu() {
-    const navLinks = doc.getElementById('navLinks');
-    const navToggle = doc.getElementById('navToggle');
-    if (navLinks && navLinks.classList.contains('is-open')) {
-      navLinks.classList.remove('is-open');
-      if (navToggle) {
-        navToggle.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.focus();
-      }
-      return true;
-    }
-    return false;
-  }
-
   /* ---------- Global key handler ---------- */
   doc.addEventListener('keydown', (e) => {
     // Never hijack typing or browser/OS shortcuts.
@@ -204,11 +176,6 @@
       }
       if (e.key === '?') { e.preventDefault(); closeDialog(); return; }
       return; // swallow other shortcuts while open
-    }
-
-    if (e.key === 'Escape') {
-      if (closeMobileMenu()) e.preventDefault();
-      return;
     }
 
     if (e.key === '?') { e.preventDefault(); openDialog(); return; }
