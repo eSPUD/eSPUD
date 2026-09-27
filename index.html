@@ -4,37 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eSPUD — Emerging Special Projects for Utilitarian Devices</title>
-  <meta name="description" content="eSPUD is a research group focused on on-device AI, model efficiency, edge systems, and applied research." />
-
+  <meta name="description" content="eSPUD is an academic research collective working on AI explainability, on-device AI, model efficiency, and edge systems." />
   <meta name="theme-color" content="#FBFAF8" />
 
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-
+  <link rel="icon" type="image/png" href="assets/logo-mark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ============ NAVBAR ============ -->
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="nav-brand" href="https://espud.org">
-        <img src="assets/logo.png" alt="eSPUD" class="nav-logo" />
+        <img src="assets/logo-mark.png" alt="" class="nav-logo" />
         <span class="nav-wordmark">eSPUD</span>
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#hero">About</a>
-        <a href="research.html">Research</a>
-        <a href="projects.html">Projects</a>
-        <a href="team.html">Team</a>
-        <!-- <a href="#showcase">Showcase</a> -->
-        <!-- <a href="#media">Media</a> -->
-        <!-- <a href="#publications">Publications</a> -->
-        <!-- <a href="#team">Team</a> -->
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#team">Team</a>
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -43,282 +34,125 @@
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <img src="assets/logo.png" alt="eSPUD logo" class="hero-logo" />
-      <h1 class="hero-title">eSPUD</h1>
-      <p class="hero-tagline">eSPUD: Emerging Special Projects for Utilitarian Devices<br />an academic research collective.</p>
+  <main class="wrap" id="main" tabindex="-1">
 
-      <div class="about-meta hero-meta">
-        <a class="meta-item" href="projects.html">
-          <span class="meta-num" data-counter="2">0</span>
-          <span class="meta-label">Delivered projects</span>
-        </a>
-        <a class="meta-item" href="research.html">
-          <span class="meta-num" data-counter="2">0</span>
-          <span class="meta-label">Delivered research</span>
-        </a>
-        <div class="meta-item">
-          <span class="meta-num" data-counter="1">0</span>
-          <span class="meta-label">On-going projects</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-num" data-counter="2">0</span>
-          <span class="meta-label">On-going research</span>
-        </div>
-      </div>
-
-      <div class="hero-os-card">
-        <div class="hero-os-group">
-          <div class="hero-os-head">
-            <span class="hero-os-eyebrow">Projects</span>
-          </div>
-          <div class="hero-os-pills">
-            <a class="os-pill" href="projects.html#pi-hub">
-              <span class="os-pill-dot"></span>
-              <span class="os-pill-name">PI-hub</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M9 6l6 6-6 6"/></svg>
-            </a>
-            <a class="os-pill" href="projects.html#gemscan">
-              <span class="os-pill-dot"></span>
-              <span class="os-pill-name">GemScan</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M9 6l6 6-6 6"/></svg>
-            </a>
-            <!-- Add more <a class="os-pill"> entries here as more projects ship -->
-          </div>
-        </div>
-
-        <div class="hero-os-group">
-          <div class="hero-os-head">
-            <span class="hero-os-eyebrow">Research</span>
-          </div>
-          <div class="hero-os-pills">
-            <a class="os-pill os-pill--research" href="research.html#inference-time-scaling">
-              <span class="os-pill-dot"></span>
-              <span class="os-pill-name">Inference-Time Scaling</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M9 6l6 6-6 6"/></svg>
-            </a>
-            <a class="os-pill os-pill--research" href="research.html#confident-machine">
-              <span class="os-pill-dot"></span>
-              <span class="os-pill-name">The Confident Machine</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M9 6l6 6-6 6"/></svg>
-            </a>
-            <!-- Add more <a class="os-pill os-pill--research"> entries here as more research ships -->
-          </div>
-        </div>
+    <div class="head">
+      <img class="head-logo" src="assets/logo.png" alt="eSPUD — academic research collective" />
+      <h1>eSPUD — Emerging Special Projects for Utilitarian Devices</h1>
+      <p>Emerging Special Projects for Utilitarian Devices. An academic research collective — everything below is built in the open and free to read or use.</p>
+      <div class="stats">
+        <span><b>2</b> delivered projects</span>
+        <span><b>2</b> delivered research</span>
+        <span><b>1</b> on-going project</span>
+        <span><b>2</b> on-going research</span>
       </div>
     </div>
 
-    <div class="hero-foot">© <span id="year"></span> eSPUD Research · All work licensed openly unless noted.</div>
-  </section>
-
-  <!--
-  ============================================================
-  RESEARCH PROJECTS — ready to uncomment when content is ready
-  ============================================================
-  <section class="projects section" id="projects">
-    <div class="container">
-      <div class="section-eyebrow">Projects</div>
-      <h2 class="section-title">What we're building.</h2>
-
-      <div class="filter-tabs" id="projectFilters">
-        <button class="filter-tab is-active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="ondevice">On-Device</button>
-        <button class="filter-tab" data-filter="efficiency">Efficiency</button>
-        <button class="filter-tab" data-filter="edge">Edge</button>
-        <button class="filter-tab" data-filter="applied">Applied</button>
-      </div>
-
-      <div class="project-grid" id="projectGrid">
-        <a href="projects/microbert.html" class="project-card" data-category="ondevice">
-          <div class="project-status status-shipped">Shipped</div>
-          <h3>microBERT</h3>
-          <p>A 4MB transformer that runs in 12ms on a Cortex-M7. Built for always-on intent classification.</p>
-          <div class="project-tags"><span>NLP</span><span>Embedded</span></div>
-        </a>
-        <a href="#" class="project-card" data-category="efficiency">
-          <div class="project-status status-active">Active</div>
-          <h3>BitPrune</h3>
-          <p>Joint quantization-and-pruning pipeline. 8x model shrink with <1% accuracy loss on ImageNet.</p>
-          <div class="project-tags"><span>Compression</span><span>Vision</span></div>
-        </a>
-        <a href="#" class="project-card" data-category="edge">
-          <div class="project-status status-research">Research</div>
-          <h3>EdgeMesh</h3>
-          <p>Federated inference across heterogeneous edge devices with adaptive partitioning.</p>
-          <div class="project-tags"><span>Distributed</span><span>Systems</span></div>
-        </a>
-        <a href="#" class="project-card" data-category="applied">
-          <div class="project-status status-shipped">Shipped</div>
-          <h3>HearAid-LM</h3>
-          <p>Real-time speech enhancement model running entirely on hearing-aid silicon.</p>
-          <div class="project-tags"><span>Audio</span><span>Health</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-  -->
-
-  <!--
-  ============================================================
-  INTERACTIVE SHOWCASE — Chart.js / Prism.js / diagrams / reports
-  ============================================================
-  <section class="showcase section" id="showcase">
-    <div class="container">
-      <div class="section-eyebrow">Showcase</div>
-      <h2 class="section-title">Pick a window into the lab.</h2>
-
-      <div class="showcase-tabs" id="showcaseTabs">
-        <button class="showcase-tab is-active" data-tab="charts">Charts</button>
-        <button class="showcase-tab" data-tab="code">Code</button>
-        <button class="showcase-tab" data-tab="diagram">Architecture</button>
-        <button class="showcase-tab" data-tab="report">Report</button>
-      </div>
-
-      <div class="showcase-panels">
-        <div class="showcase-panel is-active" data-panel="charts">
-          <canvas id="chartLatency" height="320"></canvas>
-        </div>
-
-        <div class="showcase-panel" data-panel="code">
-          <div class="code-wrap">
-            <button class="code-copy" data-copy-target="#codeSample">Copy</button>
-            <pre><code id="codeSample" class="language-python">import espud
-model = espud.load("microbert-int8")
-out = model("turn off the kitchen lights")
-print(out.intent, out.confidence)</code></pre>
+    <section class="sec" id="research">
+      <h2>Research</h2>
+      <div>
+        <article class="row" id="inference-time-scaling">
+          <div class="row-top">
+            <h3>The Story of Inference-Time Scaling</h3>
+            <span class="state"><i class="dot"></i> Accepted · VISxAI 2026</span>
           </div>
-        </div>
-
-        <div class="showcase-panel" data-panel="diagram">
-          <div class="pipeline">
-            <div class="pipe-node" data-tip="Raw sensor / mic / camera input">Input</div>
-            <div class="pipe-arrow"></div>
-            <div class="pipe-node" data-tip="On-device feature extractor">Encode</div>
-            <div class="pipe-arrow"></div>
-            <div class="pipe-node" data-tip="Quantized inference core">Infer</div>
-            <div class="pipe-arrow"></div>
-            <div class="pipe-node" data-tip="Action dispatched locally">Act</div>
+          <p>…and the training-time loop behind it. A language model can get dramatically better answers by thinking longer at answer time — not only by being retrained or made larger.</p>
+          <div class="meta">
+            Shashank Bangalore Lakshman, Scott Eiers
+            <span class="sep">·</span> 9th VISxAI Workshop, IEEE VIS 2026
+            <span class="sep">·</span> Explainable AI, Visualization, Explorable Article
+            <span class="sep">·</span> <a class="go" href="https://sapiotomy.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
           </div>
-        </div>
-
-        <div class="showcase-panel" data-panel="report">
-          <article class="report">
-            <h3>Q3 Efficiency Benchmark</h3>
-            <p>Across 6 representative tasks, microBERT-int8 holds 97.4% of FP32 accuracy at 11.8% of the memory footprint.</p>
-            <table>
-              <thead><tr><th>Model</th><th>Size</th><th>Latency</th><th>Acc</th></tr></thead>
-              <tbody>
-                <tr><td>BERT-base</td><td>418 MB</td><td>89 ms</td><td>91.2%</td></tr>
-                <tr><td>microBERT-fp16</td><td>52 MB</td><td>21 ms</td><td>90.4%</td></tr>
-                <tr><td>microBERT-int8</td><td>4 MB</td><td>12 ms</td><td>88.7%</td></tr>
-              </tbody>
-            </table>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
-
-  <!--
-  ============================================================
-  MEDIA — videos + podcast waveform card
-  ============================================================
-  <section class="media section" id="media">
-    <div class="container">
-      <div class="section-eyebrow">Media</div>
-      <h2 class="section-title">Watch & listen.</h2>
-
-      <div class="media-grid">
-        <article class="media-card video-card">
-          <div class="media-thumb"><span class="play-btn">▶</span></div>
-          <h3>NeurIPS '25 Talk — Tiny Transformers</h3>
-          <p>32 min · keynote</p>
         </article>
-        <article class="media-card video-card">
-          <div class="media-thumb"><span class="play-btn">▶</span></div>
-          <h3>EdgeMesh Deep Dive</h3>
-          <p>18 min · walkthrough</p>
-        </article>
-        <article class="media-card podcast-card">
-          <div class="waveform" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
+
+        <article class="row" id="confident-machine">
+          <div class="row-top">
+            <h3>The Confident Machine</h3>
+            <span class="state"><i class="dot"></i> Accepted · VISxAI 2026</span>
           </div>
-          <div class="podcast-meta">
-            <h3>The eSPUD Podcast</h3>
-            <p>Ep. 07 — Compilers for the constrained</p>
+          <p>Why language models make things up, and what to do about it. Fourteen short visual pages on what hallucinations are and why they are a structural consequence of how these models work.</p>
+          <div class="meta">
+            Shashank Bangalore Lakshman, Shravan Joshi
+            <span class="sep">·</span> 9th VISxAI Workshop, IEEE VIS 2026
+            <span class="sep">·</span> Explainable AI, Visualization, Hallucinations
+            <span class="sep">·</span> <a class="go" href="https://the-confident-machine.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
           </div>
-          <button class="podcast-play" aria-label="Play">▶</button>
         </article>
       </div>
-    </div>
-  </section>
-  -->
+    </section>
 
-  <!--
-  ============================================================
-  PUBLICATIONS
-  ============================================================
-  <section class="publications section" id="publications">
-    <div class="container">
-      <div class="section-eyebrow">Publications</div>
-      <h2 class="section-title">Selected papers.</h2>
-
-      <ul class="pub-list">
-        <li class="pub-item">
-          <h3>microBERT: 4MB Transformers for Always-On Devices</h3>
-          <div class="pub-meta">NeurIPS 2025 · A. Chen, R. Patel, J. Liu</div>
-          <div class="pub-links">
-            <a href="#">PDF</a><a href="#">Code</a><a href="#">BibTeX</a>
+    <section class="sec" id="projects">
+      <h2>Projects</h2>
+      <div>
+        <article class="row" id="pi-hub">
+          <div class="row-top">
+            <h3>pi-hub</h3>
+            <span class="state"><i class="dot"></i> Live · MIT</span>
           </div>
-        </li>
-        <li class="pub-item">
-          <h3>BitPrune: Joint Quantization and Pruning Under a Single Budget</h3>
-          <div class="pub-meta">ICLR 2025 · M. Okafor, S. Nakamura</div>
-          <div class="pub-links">
-            <a href="#">PDF</a><a href="#">Code</a><a href="#">BibTeX</a>
+          <p>A research hub for the Principal Investigator — projects, team coordination and academic deadlines in one local-first web app. No backend, no accounts, no telemetry; nothing you type leaves your browser.</p>
+          <div class="meta">
+            Shashank Bangalore Lakshman
+            <span class="sep">·</span> PWA, IndexedDB, Local-first, Offline
+            <span class="sep">·</span> <a class="go" href="https://pi-hub-eight.vercel.app/" target="_blank" rel="noopener">Visit ↗</a>
+            <span class="sep">·</span> <a href="https://github.com/eSPUD" target="_blank" rel="noopener">Source</a>
           </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-  -->
+        </article>
 
-  <!--
-  ============================================================
-  TEAM
-  ============================================================
-  <section class="team section" id="team">
-    <div class="container">
-      <div class="section-eyebrow">Team</div>
-      <h2 class="section-title">Who we are.</h2>
+        <article class="row" id="gemscan">
+          <div class="row-top">
+            <h3>GemScan</h3>
+            <span class="state"><i class="dot"></i> Beta · MIT</span>
+          </div>
+          <p>Scam detection that never leaves your phone — a 4-bit quantized Gemma running on the iPhone GPU via MLX-Swift. Nothing uploaded, nothing logged, ~2.5s median verdict on an iPhone 15 Pro.</p>
+          <div class="meta">
+            Shashank Bangalore Lakshman, Scott Eiers
+            <span class="sep">·</span> iOS, MLX-Swift, Gemma, Apple Vision, On-device
+            <span class="sep">·</span> <a class="go" href="https://gemscan.github.io/GemScan/" target="_blank" rel="noopener">Visit ↗</a>
+            <span class="sep">·</span> <a href="https://github.com/eSPUD" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <div class="team-grid">
-        <div class="member-card">
-          <div class="avatar">AC</div>
-          <h3>Aanya Chen</h3>
-          <p>Research Lead — efficient architectures</p>
+    <section class="sec" id="team">
+      <h2>Team</h2>
+      <div class="people">
+        <div class="person">
+          <b>Shashank Bangalore Lakshman</b>
+          <span class="role">Lead Researcher</span>
+          <span>M.S. Artificial Intelligence, UT Austin</span>
+          <span>Spring 2026 – present
+            <span class="sep">·</span> <a href="https://shashankbl.github.io" target="_blank" rel="noopener">website</a>
+            <span class="sep">·</span> <a href="https://www.linkedin.com/in/shashankbl/" target="_blank" rel="noopener">linkedin</a>
+          </span>
         </div>
-        <div class="member-card">
-          <div class="avatar">RP</div>
-          <h3>Ravi Patel</h3>
-          <p>Systems — runtimes & compilers</p>
+        <div class="person">
+          <b>Scott Lawrence Eiers</b>
+          <span class="role">Researcher</span>
+          <span>B.S. Computer Science, Western Governors University</span>
+          <span>Spring 2026 – present
+            <span class="sep">·</span> <a href="https://www.linkedin.com/in/scott-eiers-a3403a244/" target="_blank" rel="noopener">linkedin</a>
+          </span>
         </div>
-        <div class="member-card">
-          <div class="avatar">JL</div>
-          <h3>Jamie Liu</h3>
-          <p>Applied — partnerships & deployment</p>
+        <div class="person">
+          <b>Shravan Joshi</b>
+          <span class="role">Researcher</span>
+          <span>B.S. Cognitive Science, UCLA</span>
+          <span>Summer 2026 – present
+            <span class="sep">·</span> <a href="https://www.linkedin.com/in/shravanjoshi-ca/" target="_blank" rel="noopener">linkedin</a>
+          </span>
         </div>
       </div>
-    </div>
-  </section>
-  -->
+    </section>
 
-  <!-- ============ FOOTER ============ -->
+    <div class="foot">
+      <span>© <span id="year">2026</span> eSPUD Research</span>
+      <span>All work licensed openly unless noted.</span>
+      <a href="https://github.com/eSPUD" target="_blank" rel="noopener">github.com/eSPUD</a>
+    </div>
+
+  </main>
+
   <script src="js/main.js"></script>
   <script src="js/keyboard.js"></script>
 </body>
