@@ -1,2 +1,2 @@
 # eSPUD
-experimental Studio for Platform Utility & Discovery
+Experimental Studio for Platform Utility & Discovery
