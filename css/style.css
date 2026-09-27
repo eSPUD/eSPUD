@@ -34,6 +34,8 @@
 
   --container: 1040px;
   --measure:   680px;     /* reading width — prose never exceeds this */
+
+  color-scheme: light;    /* light UA widgets + scrollbars, even in dark-mode OS */
 }
 
 * { box-sizing: border-box; }
@@ -66,7 +68,7 @@ button { font-family: inherit; cursor: pointer; }
 :focus-visible {
   outline: 2px solid var(--accent-2);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 *:focus:not(:focus-visible) { outline: none; }
 /* The skip target shouldn't show a ring when focused programmatically. */
@@ -163,7 +165,7 @@ body.kbd-modal-open { overflow: hidden; }
   font-size: 24px;
   line-height: 1;
   padding: 2px 6px;
-  border-radius: 6px;
+  border-radius: var(--radius);
 }
 .kbd-close:hover { color: var(--text); }
 .kbd-list { display: flex; flex-direction: column; gap: 2px; }
@@ -190,7 +192,7 @@ kbd {
   background: var(--bg-3);
   border: 1px solid var(--border-2);
   border-bottom-width: 2px;
-  border-radius: 6px;
+  border-radius: var(--radius);
   padding: 2px 7px;
   min-width: 22px;
   text-align: center;
@@ -758,7 +760,7 @@ a.meta-item .meta-label { transition: color .2s ease; }
   max-width: 360px;
   background: var(--bg-2);
   border: 1px solid var(--border-2);
-  border-radius: 12px;
+  border-radius: var(--radius);
   box-shadow: 0 24px 50px -30px rgba(23,23,26,0.35);
   overflow: hidden;
   transform: rotate(-1.2deg);
@@ -812,7 +814,7 @@ a.meta-item .meta-label { transition: color .2s ease; }
 .mock-deadline {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--radius);
   padding: 10px 12px;
   display: flex;
   justify-content: space-between;
@@ -822,7 +824,7 @@ a.meta-item .meta-label { transition: color .2s ease; }
 .mock-deadline-name { color: var(--text); }
 .mock-deadline-time {
   font-family: var(--font-mono);
-  color: var(--accent-2);
+  color: var(--accent);
 }
 .mock-bars { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
 .mock-bar {
@@ -964,13 +966,13 @@ a.meta-item .meta-label { transition: color .2s ease; }
   border: 1px solid var(--border);
   color: var(--text-dim);
   padding: 10px 18px;
-  border-radius: 10px;
+  border-radius: var(--radius);
   font-size: 14px;
 }
 .showcase-tab.is-active {
-  background: var(--accent-dim);
-  color: var(--accent-2);
-  border-color: var(--accent);
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
 }
 .showcase-panels {
   background: var(--surface);
@@ -1001,10 +1003,10 @@ a.meta-item .meta-label { transition: color .2s ease; }
   color: var(--text-dim);
   border: 1px solid var(--border);
   padding: 5px 10px;
-  border-radius: 8px;
+  border-radius: var(--radius);
   font-size: 12px;
 }
-.code-copy:hover { color: var(--text); border-color: var(--accent); }
+.code-copy:hover { color: var(--text); border-color: var(--text); }
 
 .pipeline {
   display: flex;
@@ -1017,7 +1019,7 @@ a.meta-item .meta-label { transition: color .2s ease; }
 .pipe-node {
   background: var(--surface-2);
   border: 1px solid var(--border-2);
-  border-radius: 10px;
+  border-radius: var(--radius);
   padding: 14px 20px;
   font-family: var(--font-mono);
   font-size: 13px;
@@ -1025,17 +1027,17 @@ a.meta-item .meta-label { transition: color .2s ease; }
   cursor: help;
   transition: transform .2s ease, border-color .2s ease;
 }
-.pipe-node:hover { border-color: var(--accent); transform: translateY(-2px); }
+.pipe-node:hover { border-color: var(--text); }
 .pipe-node::after {
   content: attr(data-tip);
   position: absolute;
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  background: var(--bg-3);
-  color: var(--text);
+  background: var(--text);
+  color: var(--bg);
   padding: 8px 12px;
-  border-radius: 8px;
+  border-radius: var(--radius);
   white-space: nowrap;
   font-size: 12px;
   border: 1px solid var(--border-2);
@@ -1055,7 +1057,7 @@ a.meta-item .meta-label { transition: color .2s ease; }
   position: absolute;
   top: 0; left: -30%;
   width: 30%; height: 100%;
-  background: linear-gradient(90deg, transparent, #fff, transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.85), transparent);
   animation: flow 1.8s linear infinite;
 }
 @keyframes flow {
