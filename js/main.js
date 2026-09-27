@@ -1,6 +1,5 @@
 /* =========================================================
    eSPUD — main.js
-   - Vanta.js NET background
    - Sticky-nav scroll state + mobile toggle
    - Scroll-triggered reveals
    - Animated counters
@@ -15,35 +14,6 @@
   /* ----- Footer year ----- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  /* ----- Vanta NET ----- */
-  function initVanta() {
-    if (typeof VANTA === 'undefined' || !VANTA.NET) return;
-    const el = document.getElementById('vanta-bg');
-    if (!el) return;
-    // Respect reduced-motion preference
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    VANTA.NET({
-      el: '#vanta-bg',
-      mouseControls: !reduce,
-      touchControls: !reduce,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0x8b5cf6,
-      backgroundColor: 0x0a0a0f,
-      points: reduce ? 6.0 : 10.0,
-      maxDistance: 22.0,
-      spacing: 17.0,
-      showDots: true
-    });
-  }
-  // Vanta needs three.js; try immediately and on load as a fallback
-  if (document.readyState !== 'loading') initVanta();
-  else document.addEventListener('DOMContentLoaded', initVanta);
-  window.addEventListener('load', initVanta, { once: true });
 
   /* ----- Nav: scroll state -----
      (Mobile menu toggle is wired in keyboard.js, which loads on every page.) */
