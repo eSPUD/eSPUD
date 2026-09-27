@@ -203,8 +203,27 @@ kbd {
   border-radius: 999px;
   padding: 1px 9px;
 }
-.row .meta a.go { color: var(--accent); font-weight: 500; border-bottom-color: rgba(11,82,176,0.35); }
-.row .meta a.go:hover { color: var(--accent); border-bottom-color: var(--accent); }
+/* Entry links are buttons: solid for the thing itself, hairline for source */
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.actions .btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12.5px;
+  line-height: 1;
+  padding: 7px 13px;
+  border: 1px solid var(--text);
+  border-radius: var(--radius);
+  background: var(--text);
+  color: var(--bg);
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.actions .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.actions .btn-ghost {
+  background: none;
+  color: var(--text);
+  border-color: var(--rule-2);
+}
+.actions .btn-ghost:hover { background: none; color: var(--text); border-color: var(--text); }
 
 /* team: three compact columns */
 .people { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 20px; }
