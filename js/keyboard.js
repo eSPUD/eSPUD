@@ -2,7 +2,7 @@
    eSPUD — keyboard.js
    Site-wide keyboard accessibility:
    - Skip-to-content link
-   - Intuitive global shortcuts (h/r/p/t navigation, ? for help)
+   - Intuitive global shortcuts (h/r/t navigation, ? for help)
    - Accessible help dialog with focus trap
    - Esc closes any open dialog
    Loaded on every page; degrades gracefully when elements are absent.
@@ -65,7 +65,6 @@
   const targets = {
     h: home,
     r: jump('research'),
-    p: jump('projects'),
     t: jump('team'),
   };
 
@@ -74,7 +73,6 @@
     { keys: ['?'], desc: 'Show / hide this help' },
     { keys: ['H'], desc: 'Home' },
     { keys: ['R'], desc: 'Research' },
-    { keys: ['P'], desc: 'Projects' },
     { keys: ['T'], desc: 'Team' },
     { keys: ['Tab'], desc: 'Move to next link or button' },
     { keys: ['Shift', 'Tab'], desc: 'Move to previous' },
