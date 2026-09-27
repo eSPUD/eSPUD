@@ -15,12 +15,12 @@
   --accent:  #0B52B0;   /* the logo's blue, darkened to 7:1 on paper */
   --ok:      #15704B;
 
-  /* One marker colour per member — blue / orange / magenta stay
-     separable under the common colour-vision deficiencies, and none
-     of them collides with the green status dot. */
-  --who-sbl: #0B52B0;
-  --who-sle: #B2560D;
-  --who-sj:  #A01A6E;
+  /* One marker colour per member. Okabe-Ito blue / vermillion /
+     bluish-green: the canonical set chosen to stay distinguishable
+     under every common colour-vision deficiency. */
+  --who-sbl: #0072B2;
+  --who-sle: #D55E00;
+  --who-sj:  #009E73;
 
   --font: 'Source Serif 4', Iowan Old Style, Charter, Georgia, serif;
   --wrap:  900px;
@@ -167,10 +167,12 @@ kbd {
 }
 .dot { width: 5px; height: 5px; border-radius: 999px; background: var(--ok); display: inline-block; }
 
-/* Contributor markers: squares, so they never read as a status dot */
-.who { display: inline-flex; align-items: center; gap: 3px; }
+/* Contributor markers: bars the height of the text they sit beside,
+   never circles — a circle here would read as another status dot */
+.who { display: inline-flex; align-items: center; gap: 3px; font-size: 17px; }
 .m {
-  width: 7px; height: 7px;
+  width: 4px;
+  height: 1em;
   border-radius: 1px;
   display: inline-block;
   flex: 0 0 auto;
@@ -178,7 +180,7 @@ kbd {
 .m-sbl { background: var(--who-sbl); }
 .m-sle { background: var(--who-sle); }
 .m-sj  { background: var(--who-sj); }
-.person b .m { margin-right: 6px; vertical-align: 1px; }
+.person b .m { margin-right: 7px; vertical-align: -0.12em; }
 .row p { margin: 3px 0 0; color: var(--dim); }
 .row .cite {
   margin: 6px 0 0;
